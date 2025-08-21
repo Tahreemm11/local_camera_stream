@@ -25,3 +25,11 @@ class ExpressionRecord(models.Model):
 
     def __str__(self):
         return f"{self.person} - {self.expression}: {self.count}"
+    
+class FaceObservation(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name="observations")
+    timestamp = models.DateTimeField(auto_now_add=True)
+    x = models.IntegerField(default=0)
+    y = models.IntegerField(default=0)
+    w = models.IntegerField(default=0)
+    h = models.IntegerField(default=0)

@@ -7,7 +7,7 @@ from ultralytics import YOLO
 from .utils import update_expression_for_face
 
 # === YOLO Model Path ===
-MODEL_PATH = r"C:\Users\asdf\local_camera_stream\yolov8s-face-lindevs.pt"
+MODEL_PATH = r"C:\Users\Discount Laptop\local_camera_stream\yolov8s-face-lindevs.pt"
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"YOLO model not found at {MODEL_PATH}")
 
